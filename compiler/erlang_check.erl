@@ -285,7 +285,9 @@ check_module(File) ->
 
                %% For file: proj/apps/myapp/src/mysubdir/xx.erl
                %% For file: proj/apps/myapp/include
-               {i, filename:join([AppRoot, "include"])}
+               {i, filename:join([AppRoot, "include"])},
+               %% For file: proj/apps/myapp/src/pb
+               {i, filename:join([AppRoot, "pb"])}
               ],
             log("Code paths: ~p~n", [code:get_path()]),
             log("Compiling: compile:file(~p,~n    ~p)~n",
